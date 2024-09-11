@@ -1,0 +1,534 @@
+@charset "utf-8";
+
+/*==========================================================================
+# reset - ブラウザの差異や不要なスタイルを無くすためのスタイル
+========================================================================== */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td, small, button, time, figure {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+li, dd {
+  list-style-type: none;
+}
+
+header, footer, nav, section, article, aside, figure, figcaption {
+  display: block;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* font */
+body{
+font-family: "Noto Sans JP", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-size: 18px;
+color: #000;
+line-height: 1;
+
+
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+
+}
+
+a{
+  /* 親を参照 */
+  color: inherit;
+}
+
+/* PC用スタイル */
+ /* bodyには入れなくていい　いらない */
+  /* body{
+    width: 960px;
+    height: 1220px;
+    top: -1383px;
+    left: -2464px;
+    position: relative;
+  } */
+
+  /* ヘッダー */
+  header{
+    position:fixed;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* width: 598px; */
+    height: 109px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 100;
+    width: 100%;
+  }
+
+  
+
+  .header-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 132px;
+
+  }
+
+  h1{
+    border: 1px solid #000;
+    padding: 11px 28px 12px 29px;
+  }
+  #logo, #nav-pc{
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 46.31px;
+    color: #000;
+  }
+
+  #logo{
+    /* border: 1px solid #000; */
+    /* padding: 7.5px 22.5px; */
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  #logo:hover{
+    opacity: 0.7;
+  }
+
+  #nav-pc{
+    display: flex;
+    gap: 35px;
+  }
+
+  #nav-pc > a{
+    transition: all 0.3s ease;
+  }
+
+  #nav-pc > a:hover{
+    /* color: #000;
+    margin-left: 20px; */
+    opacity: 0.7;
+  }
+
+
+  @media screen and (max-width:767px) {
+    header{
+      height: 105px;
+    }
+
+    .header-inner{
+    max-width: 100%;
+     gap:unset;
+     padding: 0 13px 0 16px;
+     justify-content: space-between;
+     height: inherit;
+    }
+
+    h1{
+      padding: 0.5px 20px;
+
+    }
+
+    #logo{
+      font-size: 28px;
+    }
+
+    #nav-pc{
+      gap:18px;
+      font-size: 21px;
+    }
+    
+  }
+
+
+  /* main */
+ 
+
+/*トップ写真 */
+#main-visual{
+  margin: 109px auto 0;
+  max-width: 1920px;
+  
+}
+
+/* .carouselImg{
+  position: relative;
+  width: 100%;
+  padding-top: calc(400/960*100%);
+}
+.carouselImg img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+@media screen and (max-width:767px){
+
+}
+
+
+/* 記事 */
+.section-inner{
+  width: 100%;
+  max-width: 573px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:767px){
+  .section-inner{
+    padding: 0 10px;
+  }
+}
+
+
+/* about */
+#about{
+  margin-top: 50px;
+  
+}
+
+.index-h2{
+  font-size: 34px;
+  text-align: center;
+  font-weight: 700;
+
+}
+
+
+#about-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+  margin-top: 22px;
+}
+
+#person{
+  border-radius: 50%;
+  width: 141px;
+  height: auto;
+}
+
+#name{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32.69px;
+}
+
+ul{
+  margin-top: 18px;
+}
+ul > li{
+  font-weight: 400;
+  line-height: 24.52px;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul > li::before{
+  content: "・";
+  position: absolute;
+  /* top: 30%; */
+  left: 0;
+}
+
+
+
+@media screen and (max-width:767px){
+  #about-flex{
+    padding: 0 40px;
+  }
+
+  #person{
+    width: 100%;
+  }
+
+
+}
+
+
+/* works */
+#works{
+  margin: 44px auto 32px auto;
+ 
+}
+
+#works-items{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 18px;
+
+
+}
+
+.works-item{
+  width: 33%;
+  text-align: center;
+}
+
+.works-img{
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+
+}
+
+.works-txt{
+  margin-top: 27px;
+  font-weight: 400;
+  line-height: 24.52px;
+  align-items: center;
+}
+
+/* モーダル */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_layer {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.modal_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: min(100% - 40px, 600px);
+  height: calc(100% - 128px); */
+  /* background: #fff;
+  border-radius: 16px; */
+}
+
+.modal_content {
+  position: relative;
+}
+
+.modal_close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.modal_close::before,
+.modal_close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 1px;
+  background: #fff;
+  content: '';
+}
+
+.modal_close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal_close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal_img {
+  width: 100%;
+}
+
+/* .modal_img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  border-radius: 16px;
+} */
+
+
+
+
+
+@media screen and (max-width:767px){
+#works{
+  margin: 83px auto 42px auto;
+}
+
+  #works-items{
+    flex-direction: column;
+    gap: 44px;
+   
+    
+  }
+  .works-item{
+    width: 100%;
+  }
+  .works-txt{
+    margin-top: 5px;
+  }
+
+}
+
+
+
+
+
+
+/* フッター */
+
+footer{
+  margin-top: 32px;
+  margin-bottom: 17px;
+}
+#copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  line-height: 24.52px;
+}
+
+@media screen and (max-width:767px){
+
+}
+
+/* トップ戻る */
+.toTop {
+  position: fixed;
+  right: 45px;
+  bottom: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+  z-index: 100;
+}
+
+.toTop.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.toTop a {
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+  
+.toTop a::before {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  content: '';
+  transform: rotate(-45deg);
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.toTop a:hover {
+  opacity: 0.7;
+}
+
+
+/* アニメーション */
+/* .box{
+  width: 220px;
+  padding: 20px;
+  margin:0 20px 20px 0;
+  background: #666;
+  color: #fff;
+  box-sizing:border-box;
+} */
+
+
+
+/*==================================================
+ふわっ
+===================================*/
+
+
+/* fadeUp */
+
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+ 
+.fadeUpTrigger{
+    opacity: 0;
+}
+
